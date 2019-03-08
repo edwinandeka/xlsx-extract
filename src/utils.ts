@@ -26,7 +26,7 @@ export function xlsx_date(value: number, date1904: boolean): Date {
 	time = Math.floor(time / 60);
 	d.setMinutes(time % 60);
 	time = Math.floor(time / 60);
-	d.setHours(time - d.getTimezoneOffset() / 60);
+	d.setHours(time / 60);
 	return d;
 }
 
